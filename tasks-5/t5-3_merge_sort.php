@@ -3,8 +3,8 @@ declare(strict_types=1);
 
 $a = [100000002, -99, 5, 2, 4, 100000001, 7, 1, 3, 2, 6, 5];
 
-
-function merge(&$arr, $skip, $middleOfArr, $length) {
+function merge(&$arr, $skip, $middleOfArr, $length)
+{
     $leftLength = $middleOfArr - $skip + 1;
     $rightLength = $length - $middleOfArr;
 
@@ -36,7 +36,8 @@ function merge(&$arr, $skip, $middleOfArr, $length) {
     }
 }
 
-function mergeSort (&$arr, $skip, $length) {
+function mergeSort(&$arr, $skip, $length)
+{
     if ($skip < $length) {
         $middleOfArr = floor(($skip + $length) / 2);
         mergeSort($arr, $skip, $middleOfArr);
