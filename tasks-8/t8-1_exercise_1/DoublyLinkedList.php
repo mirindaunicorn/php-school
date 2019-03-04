@@ -55,13 +55,18 @@ class DoublyLinkedList
     {
         $node = $this->createNode($value);
 
+        if ($this->head === null) {
+            $this->head = $node;
+            return;
+        }
+
         $lastNode = $this->head;
 
         while (null !== $lastNode->getNext()) {
             $lastNode = $lastNode->getNext();
         }
-        $node->setPrevious($lastNode);
         $lastNode->setNext($node);
+        $node->setPrevious($lastNode);
         $this->count++;
     }
 
@@ -198,6 +203,22 @@ class DoublyLinkedList
         }
 
         return $node;
+    }
+
+    public function searchByValue($value)
+    {
+        $item = $this->head;
+        for ($i = 0; ;$i++) {
+            if ($item->getValue() === $value) {
+                return $item;
+            }
+            if ($item->getNext() === null) {
+                break;
+            }
+            $item = $item->getNext();
+        }
+
+        return null;
     }
 
     public function toArray()

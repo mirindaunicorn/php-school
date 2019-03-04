@@ -6,6 +6,7 @@ require_once __DIR__ . DIRECTORY_SEPARATOR . 'Node.php';
 
 $doublyLinkedList = new DoublyLinkedList();
 
+$doublyLinkedList->append('4');
 $doublyLinkedList->prepend('1');
 //$doublyLinkedList->deleteFromTail();
 //$doublyLinkedList->deleteFromHead();
@@ -15,7 +16,6 @@ $doublyLinkedList->delete(0);
 //$doublyLinkedList->deleteFromTail();
 //
 //$doublyLinkedList->prepend('3');
-//$doublyLinkedList->append('4');
 //$doublyLinkedList->deleteFromHead();
 
 //var_dump($doublyLinkedList->search(0)->toArray());
