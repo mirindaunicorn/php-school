@@ -1,0 +1,17 @@
+{
+    "name": "mirinda/task12",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "mirinda",
+            "email": "mir@te.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": "App/"
+        }
+    }
+}
